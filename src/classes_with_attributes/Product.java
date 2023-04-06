@@ -7,6 +7,18 @@ public class Product {
     private double price;
     private int stockAmount;
 
+    public Product() {
+        System.out.println("Constructor çalıştı");
+    }
+
+    public Product(int id, String name, String description, double price, int stockAmount) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.stockAmount = stockAmount;
+    }
+
     public int getId() {
         return id;
     }

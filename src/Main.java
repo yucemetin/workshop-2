@@ -29,8 +29,12 @@ public class Main {
         product.setPrice(500);
         product.setStockAmount(3);
 
+        Product product1 = new Product(1, "Gözlük", "Güneş gözlüğü", 250, 10);
+
         ProductManager productManager = new ProductManager();
+
         productManager.add(product);
+        productManager.add(product1);
 
         productManager.add2(1, "", "", 2, 200);
         productManager.add2(1, "", "", 2, 200);
