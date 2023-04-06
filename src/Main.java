@@ -9,6 +9,7 @@ import inheritance.Employee;
 import inheritance.EmployeeManager;
 import inheritance_demo.AskerKrediManager;
 import inheritance_demo.KrediUI;
+import interfaces.OracleCustomerDal;
 import overriding.BaseKrediManager;
 import overriding.OgrenciKrediManager;
 import overriding.OgretmenKrediManager;
@@ -98,5 +99,8 @@ public class Main {
 
         abstract_demo.CustomerManager customerManager3 = new abstract_demo.CustomerManager(new OracleDatabaseManager());
         customerManager3.getCustomers();
+
+        interfaces.CustomerManager customerManager4 = new interfaces.CustomerManager(new OracleCustomerDal());
+        customerManager4.add();
     }
 }
