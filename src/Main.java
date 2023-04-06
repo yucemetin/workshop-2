@@ -1,5 +1,6 @@
 import abstract_classes.GameCalculator;
 import abstract_classes.WomanGameCalculator;
+import abstract_demo.OracleDatabaseManager;
 import classes.CustomerManager;
 import classes_with_attributes.Product;
 import classes_with_attributes.ProductManager;
@@ -94,5 +95,8 @@ public class Main {
         GameCalculator gameCalculator = new WomanGameCalculator();
         gameCalculator.hesapla();
         gameCalculator.gameOver();
+
+        abstract_demo.CustomerManager customerManager3 = new abstract_demo.CustomerManager(new OracleDatabaseManager());
+        customerManager3.getCustomers();
     }
 }
