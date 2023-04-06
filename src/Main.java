@@ -7,6 +7,10 @@ import inheritance.EmployeeManager;
 import inheritance_demo.AskerKrediManager;
 import inheritance_demo.KrediUI;
 import inheritance_demo.OgretmenKrediManager;
+import polymorphism_demo.BaseLogger;
+import polymorphism_demo.DatabaseLogger;
+import polymorphism_demo.EmailLogger;
+import polymorphism_demo.FileLogger;
 import recapdemo_classes.DortIslem;
 
 public class Main {
@@ -66,5 +70,14 @@ public class Main {
 
         KrediUI krediUI = new KrediUI();
         krediUI.krediHesapla(new AskerKrediManager());
+
+        BaseLogger[] loggers = new BaseLogger[]{new DatabaseLogger(), new EmailLogger(), new FileLogger()};
+
+        for (BaseLogger logger : loggers) {
+            logger.log("Deneme");
+        }
+
+        polymorphism_demo.CustomerManager customerManager2 = new polymorphism_demo.CustomerManager(new EmailLogger());
+        customerManager2.add();
     }
 }
