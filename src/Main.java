@@ -1,4 +1,6 @@
 import classes.CustomerManager;
+import classes_with_attributes.Product;
+import classes_with_attributes.ProductManager;
 import recapdemo_classes.DortIslem;
 
 public class Main {
@@ -19,5 +21,16 @@ public class Main {
         System.out.println(dortIslem.cikar(24, 12));
         System.out.println(dortIslem.bol(24, 12));
         System.out.println(dortIslem.carp(24, 12));
+
+        Product product = new Product();
+        product.name = "Laptop";
+        product.id = 1;
+        product.description = "Asus Laptop";
+        product.price = 5000;
+        product.stockAmount = 3;
+
+        ProductManager productManager = new ProductManager();
+        productManager.add(product);
+
     }
 }
