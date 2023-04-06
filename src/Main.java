@@ -42,5 +42,8 @@ public class Main {
         productManager.add2(1, "", "", 2, 200);
         productManager.add2(1, "", "", 2, 200);
 
+        method_overloading.DortIslem dortIslem1 = new method_overloading.DortIslem();
+        dortIslem1.add(5, 10);
+        dortIslem1.add(5, 10, 15);
     }
 }
