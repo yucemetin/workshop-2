@@ -32,5 +32,11 @@ public class Main {
         ProductManager productManager = new ProductManager();
         productManager.add(product);
 
+        productManager.add2(1, "", "", 2, 200);
+        productManager.add2(1, "", "", 2, 200);
+        productManager.add2(1, "", "", 2, 200);
+        productManager.add2(1, "", "", 2, 200);
+        productManager.add2(1, "", "", 2, 200);
+
     }
 }
