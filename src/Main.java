@@ -23,11 +23,11 @@ public class Main {
         System.out.println(dortIslem.carp(24, 12));
 
         Product product = new Product();
-        product.name = "Laptop";
-        product.id = 1;
-        product.description = "Asus Laptop";
-        product.price = 5000;
-        product.stockAmount = 3;
+        product.setName("Laptop");
+        product.setId(1);
+        product.setDescription("Asus Laptop");
+        product.setPrice(500);
+        product.setStockAmount(3);
 
         ProductManager productManager = new ProductManager();
         productManager.add(product);
