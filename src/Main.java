@@ -4,6 +4,9 @@ import classes_with_attributes.ProductManager;
 import inheritance.Customer;
 import inheritance.Employee;
 import inheritance.EmployeeManager;
+import inheritance_demo.AskerKrediManager;
+import inheritance_demo.KrediUI;
+import inheritance_demo.OgretmenKrediManager;
 import recapdemo_classes.DortIslem;
 
 public class Main {
@@ -60,5 +63,8 @@ public class Main {
 
         EmployeeManager employeeManager = new EmployeeManager();
         employeeManager.list();
+
+        KrediUI krediUI = new KrediUI();
+        krediUI.krediHesapla(new AskerKrediManager());
     }
 }
