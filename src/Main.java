@@ -1,3 +1,5 @@
+import abstract_classes.GameCalculator;
+import abstract_classes.WomanGameCalculator;
 import classes.CustomerManager;
 import classes_with_attributes.Product;
 import classes_with_attributes.ProductManager;
@@ -88,5 +90,9 @@ public class Main {
         for (BaseKrediManager krediManager : krediManagers) {
             System.out.println(krediManager.getClass() + " :" + krediManager.hesapla(1000));
         }
+
+        GameCalculator gameCalculator = new WomanGameCalculator();
+        gameCalculator.hesapla();
+        gameCalculator.gameOver();
     }
 }
