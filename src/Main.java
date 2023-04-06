@@ -6,7 +6,10 @@ import inheritance.Employee;
 import inheritance.EmployeeManager;
 import inheritance_demo.AskerKrediManager;
 import inheritance_demo.KrediUI;
-import inheritance_demo.OgretmenKrediManager;
+import overriding.BaseKrediManager;
+import overriding.OgrenciKrediManager;
+import overriding.OgretmenKrediManager;
+import overriding.TarimKrediManager;
 import polymorphism_demo.BaseLogger;
 import polymorphism_demo.DatabaseLogger;
 import polymorphism_demo.EmailLogger;
@@ -79,5 +82,11 @@ public class Main {
 
         polymorphism_demo.CustomerManager customerManager2 = new polymorphism_demo.CustomerManager(new EmailLogger());
         customerManager2.add();
+
+        BaseKrediManager[] krediManagers = new BaseKrediManager[]{new OgrenciKrediManager(), new OgretmenKrediManager(), new TarimKrediManager()};
+
+        for (BaseKrediManager krediManager : krediManagers) {
+            System.out.println(krediManager.getClass() + " :" + krediManager.hesapla(1000));
+        }
     }
 }
