@@ -1,6 +1,9 @@
 import classes.CustomerManager;
 import classes_with_attributes.Product;
 import classes_with_attributes.ProductManager;
+import inheritance.Customer;
+import inheritance.Employee;
+import inheritance.EmployeeManager;
 import recapdemo_classes.DortIslem;
 
 public class Main {
@@ -45,5 +48,17 @@ public class Main {
         method_overloading.DortIslem dortIslem1 = new method_overloading.DortIslem();
         dortIslem1.add(5, 10);
         dortIslem1.add(5, 10, 15);
+
+        Customer customer = new Customer();
+        customer.id = 2;
+
+        Employee employee = new Employee();
+        employee.id = 1;
+
+        inheritance.CustomerManager customerManager1 = new inheritance.CustomerManager();
+        customerManager1.add();
+
+        EmployeeManager employeeManager = new EmployeeManager();
+        employeeManager.list();
     }
 }
